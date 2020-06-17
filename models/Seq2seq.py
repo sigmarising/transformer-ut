@@ -1,12 +1,12 @@
-import random
+# import random
 import numpy as np
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from torch.autograd import Variable
-
-from modules.layers import TransformerDecoderLayer
+# import torch.nn.functional as F
+# from torch.autograd import Variable
+#
+# from modules.layers import TransformerDecoderLayer
 from modules.layers import _get_pad_mask, _get_zero_mask, _get_subsequent_mask
 from utils.config import PAD, EOS, BOS, UNK
 from utils.dataset import load_pretrained_embedding

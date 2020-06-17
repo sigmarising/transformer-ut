@@ -1,8 +1,8 @@
 from __future__ import print_function
-import math
+# import math
 import torch
 import torch.nn as nn
-import numpy as np
+# import numpy as np
 
 """
 	from https://github.com/IBM/pytorch-seq2seq/blob/master/seq2seq/loss/loss.py

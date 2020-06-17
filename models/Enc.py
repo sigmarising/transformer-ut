@@ -1,12 +1,12 @@
-import random
-import numpy as np
-
-import torch
+# import random
+# import numpy as np
+#
+# import torch
 import copy
 import torch.nn as nn
-import torch.nn.functional as F
-from torch.autograd import Variable
-from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+# import torch.nn.functional as F
+# from torch.autograd import Variable
+# from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 from modules.layers import TransformerEncoderLayer
 from modules.layers import _gen_position_signal

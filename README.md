@@ -15,3 +15,12 @@ pytorch 1.3
 check Examples/
 
 
+---
+
+## The Change Made to this Repository
+
+* Comment out the unused import
+* Remove the `.to(device=device)` in `models/Act.py`
+* Add the `.gitignore` file
+
+The `models/Enc.py Encoder` can run properly with Python 3.7 and PyTorch 1.5 (CPU).

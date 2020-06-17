@@ -1,10 +1,10 @@
-import random
-import numpy as np
+# import random
+# import numpy as np
 
 import torch
-import copy
+# import copy
 import torch.nn as nn
-import torch.nn.functional as F
+# import torch.nn.functional as F
 
 
 class ACT(nn.Module):
@@ -25,13 +25,13 @@ class ACT(nn.Module):
 		# state - [B, S, self.hidden_size]
 		batch = state.size(0)
 		length = state.size(1)
-		layer_map = torch.zeros(batch, length).to(device=device)
+		layer_map = torch.zeros(batch, length)
 
 		# initial vars
-		halting_probability = torch.zeros(batch, length).to(device=device)
-		remainders = torch.zeros(batch, length).to(device=device)
-		n_updates = torch.zeros(batch, length).to(device=device)
-		previous_state = torch.zeros(batch, length, self.hidden_size).to(device=device)
+		halting_probability = torch.zeros(batch, length)
+		remainders = torch.zeros(batch, length)
+		n_updates = torch.zeros(batch, length)
+		previous_state = torch.zeros(batch, length, self.hidden_size)
 		step = 0
 
 		# for l in range(self.num_layers):
@@ -104,13 +104,13 @@ class ACT(nn.Module):
 		# state - [B, S, self.hidden_size]
 		batch = state.size(0)
 		length = state.size(1)
-		layer_map = torch.zeros(batch, length).to(device=device)
+		layer_map = torch.zeros(batch, length)
 
 		# initial vars
-		halting_probability = torch.zeros(batch, length).to(device=device)
-		remainders = torch.zeros(batch, length).to(device=device)
-		n_updates = torch.zeros(batch, length).to(device=device)
-		previous_state = torch.zeros(batch, length, self.hidden_size).to(device=device)
+		halting_probability = torch.zeros(batch, length)
+		remainders = torch.zeros(batch, length)
+		n_updates = torch.zeros(batch, length)
+		previous_state = torch.zeros(batch, length, self.hidden_size)
 		step = 0
 
 		# for l in range(self.num_layers):
