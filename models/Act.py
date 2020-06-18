@@ -33,12 +33,12 @@ class ACT(nn.Module):
 		n_updates = torch.zeros(batch, length)
 		previous_state = torch.zeros(batch, length, self.hidden_size)
 		step = 0
-		if ENABLE_GPU:
-			layer_map.cuda()
-			halting_probability.cuda()
-			remainders.cuda()
-			n_updates.cuda()
-			previous_state.cuda()
+		if ENABLE_GPU and torch.cuda.is_available():
+			layer_map = layer_map.cuda()
+			halting_probability = halting_probability.cuda()
+			remainders = remainders.cuda()
+			n_updates = n_updates.cuda()
+			previous_state = previous_state.cuda()
 
 		# for l in range(self.num_layers):
 		while ( ((halting_probability<self.threshold) & (n_updates < max_hop)).byte().any() ):
@@ -118,12 +118,12 @@ class ACT(nn.Module):
 		n_updates = torch.zeros(batch, length)
 		previous_state = torch.zeros(batch, length, self.hidden_size)
 		step = 0
-		if ENABLE_GPU:
-			layer_map.cuda()
-			halting_probability.cuda()
-			remainders.cuda()
-			n_updates.cuda()
-			previous_state.cuda()
+		if ENABLE_GPU and torch.cuda.is_available():
+			layer_map = layer_map.cuda()
+			halting_probability = halting_probability.cuda()
+			remainders = remainders.cuda()
+			n_updates = n_updates.cuda()
+			previous_state = previous_state.cuda()
 
 		# for l in range(self.num_layers):
 		while ( ((halting_probability<self.threshold) & (n_updates < max_hop)).byte().any() ):
